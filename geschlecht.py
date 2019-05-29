@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #creating dataframe
-df = pd.read_csv('datasets/originaldaten/whole_data.txt')
+df = pd.read_csv('datasets/originaldaten/data.csv')
 print(df.head())
 
 #saving all females in data field
@@ -20,4 +20,4 @@ print(df.corr())
 
 #plot some things
 #plt.boxplot(df['GROESSE'])
-df.plot()
+df.plot(x = 'E', y = 'G')
