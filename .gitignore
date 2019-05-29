@@ -3,6 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#datasets
+datasets/**/*.txt
+datasets/**/*.csv
+datasets/**/*.xls
+datasets/**/*.xlsx
+
+
+
 # C extensions
 *.so
 
