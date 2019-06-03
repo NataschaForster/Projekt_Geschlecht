@@ -9,13 +9,14 @@ pd.set_option('display.width', DESIRED_WIDTH)
 np.set_printoptions(linewidth=DESIRED_WIDTH)
 pd.set_option('display.max_columns', 15)
 pd.options.display.max_rows = None
-pd.set_option('max_colwidth', 280)
+pd.set_option('max_colwidth', 300)
 
 #CREATING A DATAFRAME
-df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep='\t', low_memory=False)
+df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep=';', low_memory=False)
 print(df.head())
 
-#print(df[df['SESSION_ID'] == 231413958])
+#PRINT ALL ROWS OF A SINGLE SESSION
+print(df[df['SESSION_ID'] == 231413958])
 
 
 
@@ -36,7 +37,6 @@ print(df.head())
 #x = df["ARTIKELNR"]
 #y = df["PRICE"]
 #plt.plot(x,y) #header gelöscht, immer noch no numeric data to plot
-
 
 #manual correlation
 #df.astype(float) #mögliche Problemlösung
