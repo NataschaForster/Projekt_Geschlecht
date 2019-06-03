@@ -1,13 +1,23 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
-#creating dataframe
-df = pd.read_csv('datasets/originaldaten/data.csv') #sep='delimiter' hilft hier nicht weiter, error_bad_lines=False lässt den pc ewig arbeiten
-df.columns = ['ANZAHL',	'ARTIKELNR', 'PROMOTIONNR',	'PPRICE', 'GROESSE', 'MARKTKENNZEICHEN', 'PLATTFORM', 'BROWSER', 'BROWSER_GROUP', 'ISMOBILE', 'MOBILE_VENDOR', 'MOBILE_MODEL', 'ENTRYPAGE',	'GESCHLECHT', 'KONTO_ID', 'ANREDE',	'ANREDEBEZ'
-] #Reihen benennen?
+#CONFIGURE CONSOLE PROPERTIES
+DESIRED_WIDTH = 320
+pd.set_option('display.width', DESIRED_WIDTH)
+np.set_printoptions(linewidth=DESIRED_WIDTH)
+pd.set_option('display.max_columns', 15)
+pd.options.display.max_rows = None
+pd.set_option('max_colwidth', 280)
 
+#CREATING A DATAFRAME
+df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep='\t', low_memory=False)
 print(df.head())
+
+#print(df[df['SESSION_ID'] == 231413958])
+
+
 
 #saving all females in data field
 #fem = len(df[df['GESCHLECHT'] == 'female'])
@@ -23,9 +33,9 @@ print(df.head())
 
 #plot some things
 #plt.boxplot(df['GROESSE'])
-x = df["ARTIKELNR"]
-y = df["PRICE"]
-plt.plot(x,y) #header gelöscht, immer noch no numeric data to plot
+#x = df["ARTIKELNR"]
+#y = df["PRICE"]
+#plt.plot(x,y) #header gelöscht, immer noch no numeric data to plot
 
 
 #manual correlation
