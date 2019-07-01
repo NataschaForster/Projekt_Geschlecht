@@ -4,14 +4,18 @@ __pycache__/
 *$py.class
 
 #datasets
-datasets/**/*.txt
-datasets/**/*.csv
-datasets/**/*.xls
-datasets/**/*.xlsx
 *.csv
 *.xlsx
 *.xls
 *.txt
+datasets/*.xlsx
+datasets/*.xls
+datasets/*.txt
+datasets/*.csv
+datasets/**/*.txt
+datasets/**/*.csv
+datasets/**/*.xls
+datasets/**/*.xlsx
 
 # C extensions
 *.so

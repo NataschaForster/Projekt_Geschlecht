@@ -11,22 +11,24 @@ pd.set_option('max_colwidth', 300)
 
 #CREATING A DATAFRAME
 for i in range(0, 54):
-    df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep=';', low_memory=False, nrows=20000, skiprows=range(1, i*20000))
+    df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep=';', low_memory=False, nrows=20000, skiprows=range(1, i*20000), encoding='latin-1')
     male = df[df.ANREDE == 1]
-    male.to_csv("datasets/male{}.format(i)")
+    male.to_csv("datasets/male{}.csv".format(i))
     female = df[df.ANREDE == 0]
-    female.to_csv("datasets/female{}.format(i)")
+    female.to_csv("datasets/female{}.csv".format(i))
     print(i)
 
+
+
 #putting em back together
-path = r'C:\Projekt\projekt_geschlecht'
-all_files = glob.glob(path + "/*.csv")
+#path = r'C:\Projekt\projekt_geschlecht2'
+#all_files = glob.glob(path + "/*.csv")
 
-li = []
+#li = []
 
-for filename in all_files:
-    gdf = pd.read_csv(filename, index_col=None, header=0)
-    li.append(gdf)
+#for filename in all_files:
+#    gdf = pd.read_csv(filename, index_col=None, header=0)
+#   li.append(gdf)
 
-frame = pd.concat(li, axis=0, ignore_index=True)
-frame.to_csv("datasets/data_with_gender")
+#frame = pd.concat(li, axis=0, ignore_index=True)
+#frame.to_csv("datasets/data_with_gender")
