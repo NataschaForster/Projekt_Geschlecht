@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-
+import glob
 #CONFIGURE CONSOLE PROPERTIES
 DESIRED_WIDTH = 320
 pd.set_option('display.width', DESIRED_WIDTH)
@@ -12,32 +10,23 @@ pd.options.display.max_rows = None
 pd.set_option('max_colwidth', 300)
 
 #CREATING A DATAFRAME
-df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep=';', low_memory=False)
-print(df.head())
+for i in range(0, 54):
+    df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep=';', low_memory=False, nrows=20000, skiprows=range(1, i*20000))
+    male = df[df.ANREDE == 1]
+    male.to_csv("datasets/male{}.format(i)")
+    female = df[df.ANREDE == 0]
+    female.to_csv("datasets/female{}.format(i)")
+    print(i)
 
-#PRINT ALL ROWS OF A SINGLE SESSION
-print(df[df['SESSION_ID'] == 231413958])
+#putting em back together
+path = r'C:\Projekt\projekt_geschlecht'
+all_files = glob.glob(path + "/*.csv")
 
+li = []
 
+for filename in all_files:
+    gdf = pd.read_csv(filename, index_col=None, header=0)
+    li.append(gdf)
 
-#saving all females in data field
-#fem = len(df[df['GESCHLECHT'] == 'female'])
-#print(fem)
-
-#replace empty fields with NaN
-#print(df.replace(r'^\s*$', np.nan, regex=True))
-#df.fillna(method='ffill')
-#print(df.head())
-
-#correlation
-#print(df.corr())
-
-#plot some things
-#plt.boxplot(df['GROESSE'])
-#x = df["ARTIKELNR"]
-#y = df["PRICE"]
-#plt.plot(x,y) #header gelöscht, immer noch no numeric data to plot
-
-#manual correlation
-#df.astype(float) #mögliche Problemlösung
-#df['F'].corr(df['S']) #wie spreche ich die richtige Reihe an? ist die Headerzeile evtl ein Problem?
+frame = pd.concat(li, axis=0, ignore_index=True)
+frame.to_csv("datasets/data_with_gender")
