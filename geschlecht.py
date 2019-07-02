@@ -17,9 +17,9 @@ if create_new:
     for i in range(0, 54):
         df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep=';', low_memory=False, nrows=20000, skiprows=range(1, i*20000), encoding='latin-1')
         male = df[df.ANREDE == 1]
-        male.to_csv("datasets/male{}.csv".format(i), sep=';')
+        male.to_csv("datasets/male{}.csv".format(i), sep=';', index=False)
         female = df[df.ANREDE == 0]
-        female.to_csv("datasets/female{}.csv".format(i), sep=';')
+        female.to_csv("datasets/female{}.csv".format(i), sep=';', index=False)
         print(i)
 
 
@@ -32,13 +32,12 @@ li = []
 
 for filename in all_files:
     try:
-        df = pd.read_csv(filename, index_col=None, header=0, sep=';')
+        df = pd.read_csv(filename, index_col=None, header=0, sep=';', low_memory=False)
         li.append(df)
 
     except Exception as e:
         print(e)
         print(filename)
 
-
 frame = pd.concat(li, axis=0, ignore_index=True, sort=True)
-frame.to_csv("datasets/dataset_with_gender.csv", sep=';')
+frame.to_csv("datasets/dataset_with_gender.csv", sep=';', index=False)

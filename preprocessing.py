@@ -1,9 +1,9 @@
 import pandas as pd
-import numpy as np
 import math
 
 #SCANNING DATASET
 df = pd.read_csv('datasets/dataset_with_gender.csv', error_bad_lines=False, header=0, sep=';', low_memory=False)
+
 
 #FUNCTION REPLACING NAN WITH 0 IN COLUMNS
 def cleanSeries(s):
@@ -21,24 +21,8 @@ def cleanSeries(s):
                 list_prepared.append(float(cleared_num))
 
         except Exception as e:
-            print(e)
             list_prepared.append(float(0))
     return pd.Series(list_prepared)
-
-#FUNCTION REPLACING 0 WITH MEAN
-def replaceMean(s):
-    list = s.to_list()
-    list_with_mean = []
-
-    for element in list:
-        if element == 0:
-            list_with_mean.append(float(s.mean()))
-            print("if")
-        else:
-            list_with_mean.append(float(element))
-            print("else")
-    return pd.Series(list_with_mean)
-
 
 #FILLING THE DATAFRAME WITH 0
 df['VIEWTIME_IN_S'] = cleanSeries(df['VIEWTIME_IN_S'])
@@ -53,15 +37,46 @@ df['ARTIKELNR'] = cleanSeries(df['ARTIKELNR'])
 df['ANZAHL'] = cleanSeries(df['ANZAHL'])
 df['ARTIKELNR'] = cleanSeries(df['ARTIKELNR'])
 
-#REPLACING SOME MISSING VALUES WITH THE COLUMN MEAN
-df['VIEWTIME_IN_S'] = replaceMean(df['VIEWTIME_IN_S'])
-print("doneeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-df['ABSATZ'] = replaceMean(df['ABSATZ'])
-print("doneeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-df['PPRICE'] = replaceMean(df['PPRICE'])
-print("doneeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-df['GROESSE'] = replaceMean(df['GROESSE'])
-print("doneeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+#WRITING A NEW CSV
+df.to_csv("datasets/preprocessed_zero.csv", sep=';', index=False, header=0)
+
+
+#FUNCTION REPLACING 0 WITH MEAN
+
+#calculating the mean of the used columns
+#which columns are worth replacing with the mean?
+mean_view = float(df['VIEWTIME_IN_S'].mean())
+mean_groesse = float(df['GROESSE'].mean()) # equals 0, so irrelevant
+mean_absatz = float(df['ABSATZ'].mean())
+mean_pprice = float(df['PPRICE'].mean()) # equals 0, so irrelevant
+mean_bestellsumme = float(df['BESTELLSUMME'].mean()) # equals 0, so irrelevant
+mean_coupon = float(df['COUPONWERT'].mean()) # equals 0, so irrelevant
+mean_anzahl = float(df['ANZAHL'].mean()) #MACHT DIESER WERT SINN?_____________________________________________________________________________
+
+mean_list = [mean_view, mean_groesse, mean_absatz, mean_pprice, mean_bestellsumme, mean_coupon, mean_anzahl]
+print(mean_list)
+relevant_means = [mean_view, mean_absatz, mean_anzahl]
+
+#function
+def replaceMean(s, mean):
+
+    column_list = s.to_list()
+    list_with_mean = []
+
+    for element in column_list:
+        if element == 0:
+            list_with_mean.append(float(mean))
+        else:
+            list_with_mean.append(float(element))
+    return pd.Series(list_with_mean)
+
+
+
+#REPLACING ALL RELEVANT MEANS
+df['VIEWTIME_IN_S'] = replaceMean(df['VIEWTIME_IN_S'], float(df['VIEWTIME_IN_S'].mean()))
+df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
+df['ANZAHL'] = replaceMean(df['ANZAHL'], float(df['ABSATZ'].mean()))
 
 #WRITING A NEW CSV
-df.to_csv("datasets/preprocessed_1.csv", sep=';')
+df.to_csv("datasets/preprocessed_mean.csv", sep=';', index=False, header=0)
+
