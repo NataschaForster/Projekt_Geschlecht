@@ -2,7 +2,7 @@ import pandas as pd
 import math
 
 #SCANNING DATASET
-df = pd.read_csv('datasets/dataset_with_gender.csv', error_bad_lines=False, header=0, sep=';', low_memory=False)
+df = pd.read_csv('datasets/preprocessing1_only_gender/dataset_with_gender.csv', error_bad_lines=False, header=0, sep=';', low_memory=False)
 
 
 #FUNCTION REPLACING NAN WITH 0 IN COLUMNS
@@ -39,7 +39,7 @@ df['ANZAHL'] = cleanSeries(df['ANZAHL'])
 df['ARTIKELNR'] = cleanSeries(df['ARTIKELNR'])
 
 #WRITING A NEW CSV
-df.to_csv("datasets/preprocessed_zero.csv", sep=';',  index=False)
+df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_zero.csv", sep=';',  index=False)
 
 
 #FUNCTION REPLACING 0 WITH MEAN
@@ -58,7 +58,6 @@ relevant_means = [mean_view, mean_absatz, mean_anzahl]
 
 #function
 def replaceMean(s, mean):
-
     column_list = s.to_list()
     list_with_mean = []
 
@@ -77,5 +76,5 @@ df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
 df['ANZAHL'] = replaceMean(df['ANZAHL'], float(df['ABSATZ'].mean()))
 
 #WRITING A NEW CSV
-df.to_csv("datasets/preprocessed_mean.csv", sep=';', index=False)
+df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", sep=';', index=False)
 
