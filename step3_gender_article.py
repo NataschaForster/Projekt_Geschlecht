@@ -22,7 +22,7 @@ def gender_article(s):
             new_column_list.append(1) #feminine clothing
         else:
             new_column_list.append(2) #no gendered clothing
-            
+
         counter = 0
         counter_herren = 0
 

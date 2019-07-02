@@ -73,7 +73,6 @@ def replaceMean(s, mean):
 #REPLACING ALL RELEVANT MEANS
 df['VIEWTIME_IN_S'] = replaceMean(df['VIEWTIME_IN_S'], float(df['VIEWTIME_IN_S'].mean()))
 df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
-df['ANZAHL'] = replaceMean(df['ANZAHL'], float(df['ABSATZ'].mean()))
 
 #WRITING A NEW CSV
 df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", sep=';', index=False)
