@@ -21,6 +21,7 @@ def cleanSeries(s):
                 list_prepared.append(float(cleared_num))
 
         except Exception as e:
+            print(e)
             list_prepared.append(float(0))
     return pd.Series(list_prepared)
 
@@ -38,11 +39,10 @@ df['ANZAHL'] = cleanSeries(df['ANZAHL'])
 df['ARTIKELNR'] = cleanSeries(df['ARTIKELNR'])
 
 #WRITING A NEW CSV
-df.to_csv("datasets/preprocessed_zero.csv", sep=';', index=False, header=0)
+df.to_csv("datasets/preprocessed_zero.csv", sep=';',  index=False)
 
 
 #FUNCTION REPLACING 0 WITH MEAN
-
 #calculating the mean of the used columns
 #which columns are worth replacing with the mean?
 mean_view = float(df['VIEWTIME_IN_S'].mean())
@@ -51,8 +51,7 @@ mean_absatz = float(df['ABSATZ'].mean())
 mean_pprice = float(df['PPRICE'].mean()) # equals 0, so irrelevant
 mean_bestellsumme = float(df['BESTELLSUMME'].mean()) # equals 0, so irrelevant
 mean_coupon = float(df['COUPONWERT'].mean()) # equals 0, so irrelevant
-mean_anzahl = float(df['ANZAHL'].mean()) #MACHT DIESER WERT SINN?_____________________________________________________________________________
-
+mean_anzahl = float(df['ANZAHL'].mean()) #isn't 0, but replacing doesn't make much sense
 mean_list = [mean_view, mean_groesse, mean_absatz, mean_pprice, mean_bestellsumme, mean_coupon, mean_anzahl]
 print(mean_list)
 relevant_means = [mean_view, mean_absatz, mean_anzahl]
@@ -78,5 +77,5 @@ df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
 df['ANZAHL'] = replaceMean(df['ANZAHL'], float(df['ABSATZ'].mean()))
 
 #WRITING A NEW CSV
-df.to_csv("datasets/preprocessed_mean.csv", sep=';', index=False, header=0)
+df.to_csv("datasets/preprocessed_mean.csv", sep=';', index=False)
 

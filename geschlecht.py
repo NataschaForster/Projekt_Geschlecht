@@ -10,7 +10,7 @@ pd.set_option('display.max_columns', 15)
 pd.options.display.max_rows = None
 pd.set_option('max_colwidth', 300)
 
-create_new = False
+create_new = True
 
 if create_new:
     #CHUNKING DATAFRAME INTO 108 SMALLER ONES; NO EMPTY GENDER FIELDS REMAINING
@@ -41,3 +41,4 @@ for filename in all_files:
 
 frame = pd.concat(li, axis=0, ignore_index=True, sort=True)
 frame.to_csv("datasets/dataset_with_gender.csv", sep=';', index=False)
+print("finish: datasets/dataset_with_gender.csv")
