@@ -40,5 +40,5 @@ for filename in all_files:
         print(filename)
 
 
-frame = pd.concat(li, axis=0, ignore_index=True)
+frame = pd.concat(li, axis=0, ignore_index=True, sort=True)
 frame.to_csv("datasets/dataset_with_gender.csv", sep=';')
