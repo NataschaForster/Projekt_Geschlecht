@@ -1,5 +1,6 @@
 import pandas as pd
 import math
+import numpy as np
 
 #SCANNING DATASET
 df = pd.read_csv('datasets/preprocessing1_only_gender/dataset_with_gender.csv', error_bad_lines=False, header=0, sep=';', low_memory=False)
@@ -21,7 +22,7 @@ def cleanSeries(s):
                 list_prepared.append(float(cleared_num))
 
         except Exception as e:
-            print(e)
+            #print(e)
             list_prepared.append(float(0))
     return pd.Series(list_prepared)
 
@@ -68,12 +69,16 @@ def replaceMean(s, mean):
             list_with_mean.append(float(element))
     return pd.Series(list_with_mean)
 
-
-
 #REPLACING ALL RELEVANT MEANS
 df['VIEWTIME_IN_S'] = replaceMean(df['VIEWTIME_IN_S'], float(df['VIEWTIME_IN_S'].mean()))
 df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
 
-#WRITING A NEW CSV
-df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", sep=';', index=False)
+#WRITING A NEW CSV WITH NEW HEADER NEEDED IN THE NEXT STEP
+CLOTHING_GENDER = []
+CLOTHING_GENDER_UNIQUE = []
 
+df['CLOTHING_GENDER'] = pd.Series(CLOTHING_GENDER)
+df['CLOTHING_GENDER_UNIQUE'] = pd.Series(CLOTHING_GENDER_UNIQUE)
+
+
+df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", sep=';', index=False)

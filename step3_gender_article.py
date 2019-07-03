@@ -4,12 +4,13 @@ df = pd.read_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.
 
 #NEW COLUMN WITH "WATCHED WOMENS/MENS CLOTHING" BY SEARCHING IN URL STRING
 def gender_article(s):
-    column_list = s.to_list()
+    content_list = s.to_list()
     word_list_damen = ["Damen", "BHs", "Kleider", "Blusen"]
     new_column_list = []
     counter = 0
     counter_herren = 0
-    for line in column_list:
+
+    for line in content_list:
         for word in word_list_damen:
             if "Herren" in str(line):
                 counter_herren = counter_herren + 1
@@ -31,5 +32,33 @@ def gender_article(s):
 
 df['CLOTHING_GENDER'] = gender_article(df['CONTENT_NAME'].astype(str))
 print("checked for gender clothing")
-df.to_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", sep=';', index=False)
+
+
+#FUNCTION FOR NEW COLUMN: CHECKING IF LOOKED FOR CLOTHING FOR BOTH GENDER
+def content_unique_session(clothing_gender, session):
+    tdf = pd.DataFrame(clothing_gender, session)
+    unique_session_list = session.unique().to_list()
+    session_list = session.to_list()
+    clothing_list = clothing_gender.to_list()
+    new_column_list = []
+
+    bool_damen = False
+    bool_herren = False
+
+    for session in unique_session_list:
+        session in tdfg
+
+
+
+
+
+    if bool_damen and bool_herren:  # funktioniert nur für eine Reihe, muss auf ganze Session angewandt werden (how?)
+        new_column_list.append(3)
+    else:
+        new_column_list.append(element)
+
+ '''''''''
+df['CLOTHING_GENDER_UNIQUE'] = content_unique_session(df['CLOTHING_GENDER'].astype(int), df['SESSION_ID'].astype(str))
+
+#df.to_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", sep=';', index=False)
 print("dataframe to csv done")
