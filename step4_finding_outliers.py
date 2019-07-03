@@ -11,7 +11,8 @@ numeric_columns = [df['ABSATZ'], df['PPRICE'], df['GROESSE'], df['BESTELLSUMME']
 
 #VISUALIZING THE DISTRIBUTION OF NUMERIC COLUMNS
 for column in numeric_columns:
-    sns.distplot(column.astype(float));
+    x = np.random.normal(size=100)
+    sns.distplot(x);
 
 #DELETING OUTLiERS
 for column in numeric_columns:

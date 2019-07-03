@@ -32,18 +32,21 @@ def gender_article(s):
 
 df['CLOTHING_GENDER'] = gender_article(df['CONTENT_NAME'].astype(str))
 print("checked for gender clothing")
-
+df.to_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", sep=';', index=False)
 
 
 
 #FUNCTION FOR NEW COLUMN: CHECKING IF LOOKED FOR CLOTHING FOR BOTH GENDER
 #alles nur notizen bisher
+df = pd.read_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
+
 def content_unique_session():
-    temp_df = pd.read_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", usecols=['SESSION_ID', 'CONTENT_NAME', 'CLOTHING_GENDER', 'CLOTHING_GENDER_UNIQUE'], error_bad_lines=False, header=0, sep=';', low_memory=False)
+    temp_df = pd.read_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", usecols=['SESSION_ID', 'CONTENT_NAME', 'CLOTHING_GENDER', 'CLOTHING_GENDER_UNIQUE'], error_bad_lines=False, header=0, sep=';', low_memory=False)
     new_column_list = []
     unique_session_list = temp_df['SESSION_ID'].unique()
     print("unique")
     print(type(temp_df))
+    counter = 0
 
     #GETTING INDICES OF ROWS BELONGING TO SESSION
     for session in unique_session_list:
@@ -52,13 +55,19 @@ def content_unique_session():
         bool_herren = False
         rows_with_session_index = reset[reset["SESSION_ID"] == session].index.tolist()
 
+
         #CHECKING IF LOOKED AT GENDER SPECIFIC CLOTHING
+
+        len_session = len(rows_with_session_index)
+
         for index in rows_with_session_index:
-            value = temp_df.iloc[index, 0]
+            value = temp_df.iloc[index, int(2)]
+
             if value == 0:
                 bool_damen = True
             elif value == 1:
                 bool_herren = True
+
             if bool_damen and bool_herren:
                 new_column_list.append(3)
             elif bool_damen and not bool_herren:
@@ -68,9 +77,15 @@ def content_unique_session():
             else:
                 new_column_list.append(2)
 
+        counter = counter + 1
+        print(str((counter / len(unique_session_list))*100) + "%")
+
+    return pd.Series(new_column_list)
+
+
 df['CLOTHING_GENDER_UNIQUE'] = content_unique_session()
 
 
-df.to_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", sep=';', index=False)
+df.to_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article_session.csv", sep=';', index=False)
 print("dataframe to csv done")
 
