@@ -73,7 +73,7 @@ def replaceMean(s, mean):
 df['VIEWTIME_IN_S'] = replaceMean(df['VIEWTIME_IN_S'], float(df['VIEWTIME_IN_S'].mean()))
 df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
 
-#WRITING A NEW CSV WITH NEW HEADER NEEDED IN THE NEXT STEP
+#WRITING A NEW HEADER NEEDED IN THE NEXT STEP
 CLOTHING_GENDER = []
 CLOTHING_GENDER_UNIQUE = []
 

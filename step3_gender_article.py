@@ -34,31 +34,43 @@ df['CLOTHING_GENDER'] = gender_article(df['CONTENT_NAME'].astype(str))
 print("checked for gender clothing")
 
 
+
+
 #FUNCTION FOR NEW COLUMN: CHECKING IF LOOKED FOR CLOTHING FOR BOTH GENDER
-def content_unique_session(clothing_gender, session):
-    tdf = pd.DataFrame(clothing_gender, session)
-    unique_session_list = session.unique().to_list()
-    session_list = session.to_list()
-    clothing_list = clothing_gender.to_list()
+#alles nur notizen bisher
+def content_unique_session():
+    temp_df = pd.read_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", usecols=['SESSION_ID', 'CONTENT_NAME', 'CLOTHING_GENDER', 'CLOTHING_GENDER_UNIQUE'], error_bad_lines=False, header=0, sep=';', low_memory=False)
     new_column_list = []
+    unique_session_list = temp_df['SESSION_ID'].unique()
+    print("unique")
+    print(type(temp_df))
 
-    bool_damen = False
-    bool_herren = False
-
+    #GETTING INDICES OF ROWS BELONGING TO SESSION
     for session in unique_session_list:
-        session in tdfg
+        reset = temp_df.reset_index()
+        bool_damen = False
+        bool_herren = False
+        rows_with_session_index = reset[reset["SESSION_ID"] == session].index.tolist()
+
+        #CHECKING IF LOOKED AT GENDER SPECIFIC CLOTHING
+        for index in rows_with_session_index:
+            value = temp_df.iloc[index, 0]
+            if value == 0:
+                bool_damen = True
+            elif value == 1:
+                bool_herren = True
+            if bool_damen and bool_herren:
+                new_column_list.append(3)
+            elif bool_damen and not bool_herren:
+                new_column_list.append(0)
+            elif bool_herren and not bool_damen:
+                new_column_list.append(1)
+            else:
+                new_column_list.append(2)
+
+df['CLOTHING_GENDER_UNIQUE'] = content_unique_session()
 
 
-
-
-
-    if bool_damen and bool_herren:  # funktioniert nur für eine Reihe, muss auf ganze Session angewandt werden (how?)
-        new_column_list.append(3)
-    else:
-        new_column_list.append(element)
-
- '''''''''
-df['CLOTHING_GENDER_UNIQUE'] = content_unique_session(df['CLOTHING_GENDER'].astype(int), df['SESSION_ID'].astype(str))
-
-#df.to_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", sep=';', index=False)
+df.to_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", sep=';', index=False)
 print("dataframe to csv done")
+
