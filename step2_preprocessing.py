@@ -1,6 +1,5 @@
 import pandas as pd
 import math
-import numpy as np
 
 #SCANNING DATASET
 df = pd.read_csv('datasets/preprocessing1_only_gender/dataset_with_gender.csv', error_bad_lines=False, header=0, sep=';', low_memory=False)

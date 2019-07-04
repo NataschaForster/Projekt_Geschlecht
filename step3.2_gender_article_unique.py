@@ -61,16 +61,16 @@ def content_unique_session_separate_csv ():
             reset = df.reset_index()
             rows_list = reset[reset["SESSION_ID"] == session].index.tolist()
             rows_df = pd.DataFrame(rows_list)
-            temp_list = []
+            temp_df = pd.DataFrame()
 
             for index in rows_df:
-                row = df.iloc[index]
+                row = pd.Series(df.iloc[index])
                 print(row)
                 print(type(row))
-                temp_list.append(row)
-                print(len(temp_list))
+                temp_df = pd.concat(row)
+                print(len(temp_df))
 
-            temp_df = pd.DataFrame(temp_list)
+            temp_df = pd.DataFrame(temp_df)
             temp_df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/all_sessions/session{}.csv".format(counter),sep=';', index=False)
             counter = counter + 1
 

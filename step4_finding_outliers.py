@@ -1,8 +1,48 @@
 import pandas as pd
-import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 df = pd.read_csv("datasets/preprocessing3.1_genderspecific_clothing/preprocessing_genderspecific_article.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
-#numeric_columns = [df['VIEWTIME_IN_S', df['ABSATZ'], df['PPRICE'], df['GROESSE'], df['BESTELLSUMME'], df['COUPONWERT'], df['PROMOTIONNR'], df['MARKTKENNZEICHEN'], df['ARTIKELNR'], df['ANZAHL'], df['ARTIKELNR']]]
+
+n_rows = 5
+n_cols = 6
+count = 0
+col_num = 1
+
+plt.subplots(n_rows, n_cols)
+for i in range(n_rows):
+    for j in range(n_cols):
+        plt.subplot(n_rows, n_cols, count+1)
+        sns.boxplot(df.iloc[:, col_num], orient='vertical')
+        if col_num < df.shape[1]:
+            count += 1
+            col_num += 1
+
+plt.show()
+
+
+
+
+"""""""""
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("datasets/preprocessing3.1_genderspecific_clothing/preprocessing_genderspecific_article.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
+#numeric_columns = df.loc[:, df.columns != [df['ABSATZ'], df['PPRICE'], df['GROESSE'], df['BESTELLSUMME'], df['COUPONWERT'], df['PROMOTIONNR'], df['MARKTKENNZEICHEN'], df['ARTIKELNR'], df['ANZAHL'], df['ARTIKELNR']]]
+
+
+
+boxp = sns.boxplot(x = df['GROESSE'], data = df)
+plt.show()
+
+
+low = .05
+high = .95
+quant_df = numeric_columns.quantile([low, high])
+print(quant_df)
+
 
 #FUNCTION TO DETECT OUTLIERS
 def detect_outliers(column):
@@ -24,9 +64,9 @@ def detect_outliers(column):
 outliers = pd.DataFrame(detect_outliers(df['VIEWTIME_IN_S']))
 
 #GETTING IGD
-sorted(df) #nach welcher Spalte wird sortiert? wenn ich eine spalte sortiere, kriege ich das df nie wieder richtig zusammen -> index mitliefern?
+#sorted(df) #nach welcher Spalte wird sortiert? wenn ich eine spalte sortiere, kriege ich das df nie wieder richtig zusammen -> index mitliefern?
 
 
 #VISUALIZING THE DISTRIBUTION OF NUMERIC COLUMNS
 #for column in numeric_columns:
-
+"""""""""
