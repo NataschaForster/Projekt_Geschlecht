@@ -46,7 +46,7 @@ df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_zero.csv", s
 #FUNCTION REPLACING 0 WITH MEAN
 #calculating the mean of the used columns
 #which columns are worth replacing with the mean?
-mean_view = float(df['VIEWTIME_IN_S'].mean())
+mean_view = int(df['VIEWTIME_IN_S'].mean())
 mean_groesse = float(df['GROESSE'].mean()) # equals 0, so irrelevant
 mean_absatz = float(df['ABSATZ'].mean())
 mean_pprice = float(df['PPRICE'].mean()) # equals 0, so irrelevant

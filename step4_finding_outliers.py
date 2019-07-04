@@ -1,19 +1,32 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
 
-df = pd.read_csv("datasets/preprocessing3_gendered_clothing/preprocessing_gender_article.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
+df = pd.read_csv("datasets/preprocessing3.1_genderspecific_clothing/preprocessing_genderspecific_article.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
+#numeric_columns = [df['VIEWTIME_IN_S', df['ABSATZ'], df['PPRICE'], df['GROESSE'], df['BESTELLSUMME'], df['COUPONWERT'], df['PROMOTIONNR'], df['MARKTKENNZEICHEN'], df['ARTIKELNR'], df['ANZAHL'], df['ARTIKELNR']]]
 
-#LIST OF ALL NUMERIC COLUMNS9
-#viewtime missing
-numeric_columns = [df['ABSATZ'], df['PPRICE'], df['GROESSE'], df['BESTELLSUMME'], df['COUPONWERT'], df['PROMOTIONNR'], df['MARKTKENNZEICHEN'], df['ARTIKELNR'], df['ANZAHL'], df['ARTIKELNR']]
+#FUNCTION TO DETECT OUTLIERS
+def detect_outliers(column):
+    value_list = column.tolist()
+    threshold = 3
+    mean = np.mean(column)
+    std = np.std(column)
+
+    for value in value_list:
+        z_score = (value - mean) / std
+        if np.abs(z_score) > threshold:
+            outliers.append(value)
+
+    print(len(outliers))
+    return outliers
+
+
+#CREATING DATASET WITH DETECTED OUTLIERS
+outliers = pd.DataFrame(detect_outliers(df['VIEWTIME_IN_S']))
+
+#GETTING IGD
+sorted(df) #nach welcher Spalte wird sortiert? wenn ich eine spalte sortiere, kriege ich das df nie wieder richtig zusammen -> index mitliefern?
+
 
 #VISUALIZING THE DISTRIBUTION OF NUMERIC COLUMNS
-for column in numeric_columns:
-    x = np.random.normal(size=100)
-    sns.distplot(x);
+#for column in numeric_columns:
 
-#DELETING OUTLiERS
-for column in numeric_columns:
-    print("1")
