@@ -1,6 +1,7 @@
 import pandas as pd
 import glob
-
+import shutil
+import os
 
 df = pd.read_csv("datasets/preprocessing3.1_genderspecific_clothing/preprocessing_genderspecific_article.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
 
@@ -50,33 +51,35 @@ def content_unique_session():
     return pd.Series(new_column_list)
 '''''''''
 
-#SPLITING DATASET IN SMALLER SETS WITH ONLY ONE SESSION EACH AND FILLING THE LAST COLUMN
+# SPLITING DATASET IN SMALLER SETS WITH ONLY ONE SESSION EACH AND FILLING THE LAST COLUMN
 def content_unique_session_separate_csv ():
     unique_session_list = df['SESSION_ID'].unique()
+    counter = 0
 
-    for i in range(0, len(unique_session_list)):
-        counter = 1
+    for session in unique_session_list:
 
-        for session in unique_session_list:
-            reset = df.reset_index()
-            rows_list = reset[reset["SESSION_ID"] == session].index.tolist()
-            rows_df = pd.DataFrame(rows_list)
-            temp_df = pd.DataFrame()
+        reset = df.reset_index()
 
-            for index in rows_df:
-                row = pd.Series(df.iloc[index])
-                print(row)
-                print(type(row))
-                temp_df = pd.concat(row)
-                print(len(temp_df))
+        session_row_ids = reset[reset["SESSION_ID"] == session].index.tolist() # muss session hier nicht mit df  interagieren?
+        temp_df = pd.DataFrame()
 
-            temp_df = pd.DataFrame(temp_df)
-            temp_df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/all_sessions/session{}.csv".format(counter),sep=';', index=False)
-            counter = counter + 1
+        for index in session_row_ids:
+            print("i: ", index)
+            row = pd.Series(reset.iloc[index])
+            temp_df = temp_df.append(row)
+            print("l: ", len(temp_df))
+
+            # boolscher Vergleich einfügen
+
+        counter = counter + 1
+
+        print("{} csv done".format(session))
+        temp_df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/all_sessions/session{}.csv".format(counter), sep=';', index=False)
 
     '''''''''
-    #path = r'C:\Projekt\projekt_geschlecht2\datasets\preprocessing3_gendered_clothing'
-    #all_files = glob.glob(path + "/*.csv")
+    #Concatenating all files back together 
+    path = r'C:\Projekt\projekt_geschlecht2\datasets\preprocessing3_gendered_clothing'
+    all_files = glob.glob(path + "/*.csv")
 
 
     for file in all_files:
@@ -100,8 +103,23 @@ def content_unique_session_separate_csv ():
 '''''''''
 
 
-#df['CLOTHING_GENDER_UNIQUE'] = content_unique_session()
+# df['CLOTHING_GENDER_UNIQUE'] = content_unique_session()
+path = "datasets/preprocessing3.2_gender_clothing_unique/all_sessions"
+
+try:
+
+    shutil.rmtree(path)
+except:
+    print("folder is removed")
+
+try:
+    os.mkdir(path)
+except OSError:
+    print ("Creation of the directory %s failed" % path)
+else:
+    print ("Successfully created the directory %s " % path)
+
 content_unique_session_separate_csv()
 
-#df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/all_sessions_with_gender.csv", sep=';', index=False)
+# df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/all_sessions_with_gender.csv", sep=';', index=False)
 print("dataframe to csv done")

@@ -1,5 +1,6 @@
 In this Project I want to implement (more than) one Machine Learning algorithm to suspect the gender of a person.
 
+
 In the first few steps I preprocessed the data:
 
 Step 1:     Deleting all rows with unknown gender.
@@ -26,4 +27,3 @@ Step 3.3:   Creating a new dataframe with only numeric and important columns. (T
 
 Step 4:     Finding outliers and replacing them with 0 and the mean.
             Data preprocessing done.
-            bla
