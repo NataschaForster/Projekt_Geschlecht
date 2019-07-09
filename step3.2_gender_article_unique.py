@@ -5,7 +5,6 @@ import os
 
 df = pd.read_csv("datasets/preprocessing3.1_genderspecific_clothing/preprocessing_genderspecific_article.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
 
-
 '''''''''
 #FUNCTION FOR NEW COLUMN: CHECKING IF LOOKED FOR CLOTHING FOR BOTH GENDER
 def content_unique_session():
@@ -62,64 +61,79 @@ def content_unique_session_separate_csv ():
 
         session_row_ids = reset[reset["SESSION_ID"] == session].index.tolist() # muss session hier nicht mit df  interagieren?
         temp_df = pd.DataFrame()
+        new_column_list = []
+
+        bool_damen = False
+        bool_herren = False
 
         for index in session_row_ids:
-            print("i: ", index)
             row = pd.Series(reset.iloc[index])
             temp_df = temp_df.append(row)
-            print("l: ", len(temp_df))
 
-            # boolscher Vergleich einfügen
+        for index in range(0, len(temp_df)):
+            row = temp_df.iloc[index]
+            value = row['CLOTHING_GENDER']
+
+            if value == 1:
+                bool_damen = True
+            elif value == 0:
+                bool_herren = True
+
+        if bool_damen and bool_herren:
+            for i in range(0, len(temp_df['CLOTHING_GENDER_UNIQUE'])):
+                new_column_list.append(3)
+        elif bool_damen and not bool_herren:
+            for i in range(0, len(temp_df['CLOTHING_GENDER_UNIQUE'])):
+                new_column_list.append(1)
+        elif bool_herren and not bool_damen:
+            for i in range(0, len(temp_df['CLOTHING_GENDER_UNIQUE'])):
+                new_column_list.append(0)
+        else:
+            for i in range(0, len(temp_df['CLOTHING_GENDER_UNIQUE'])):
+                new_column_list.append(2)
+
+        temp_df['CLOTHING_GENDER_UNIQUE'] = new_column_list
 
         counter = counter + 1
-
         print("{} csv done".format(session))
         temp_df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/all_sessions/session{}.csv".format(counter), sep=';', index=False)
 
-    '''''''''
-    #Concatenating all files back together 
-    path = r'C:\Projekt\projekt_geschlecht2\datasets\preprocessing3_gendered_clothing'
-    all_files = glob.glob(path + "/*.csv")
 
-
-    for file in all_files:
-        df = pd.read_csv(file)
-        value = df['CLOTHING_GENDER']
-        
-        for i in range(0, file.count()):
-            if value.iloc[i, int( == 0:
-                bool_damen = True
-            elif value == 1:
-                bool_herren = True
-    
-            if bool_damen and bool_herren:
-                new_column_list.append(3)
-            elif bool_damen and not bool_herren:
-                new_column_list.append(0)
-            elif bool_herren and not bool_damen:
-                new_column_list.append(1)
-            else:
-                new_column_list.append(2)
-'''''''''
-
-
-# df['CLOTHING_GENDER_UNIQUE'] = content_unique_session()
-path = "datasets/preprocessing3.2_gender_clothing_unique/all_sessions"
+# DELETING OLD CSVS AND CREATING FOLDER
+path2 = "datasets/preprocessing3.2_gender_clothing_unique/all_sessions"
 
 try:
 
-    shutil.rmtree(path)
+    shutil.rmtree(path2)
 except:
     print("folder is removed")
 
 try:
-    os.mkdir(path)
+    os.mkdir(path2)
 except OSError:
-    print ("Creation of the directory %s failed" % path)
+    print("Creation of the directory %s failed" % path2)
 else:
-    print ("Successfully created the directory %s " % path)
+    print("Successfully created the directory %s " % path2)
 
+# CREATE SMALL CSVS
 content_unique_session_separate_csv()
 
-# df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/all_sessions_with_gender.csv", sep=';', index=False)
-print("dataframe to csv done")
+
+# CONCATENATING ALL FILES BACK TOGETHER
+path1 = r'C:\Projekt\projekt_geschlecht2\datasets\preprocessing3.2_gender_clothing_unique\all_sessions'
+all_files = glob.glob(path1 + "/*.csv")
+
+li = []
+
+for filename in all_files:
+    try:
+        df = pd.read_csv(filename, index_col=None, header=0, sep=';', low_memory=False)
+        li.append(df)
+
+    except Exception as e:
+        print(e)
+        print(filename)
+
+print('creating final dataset')
+frame = pd.concat(li, axis=0, ignore_index=True, sort=True)
+frame.to_csv("datasets/preprocessing3.2_gender_clothing_unique/whole_dataset.csv", sep=';', index=False)

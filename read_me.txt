@@ -17,7 +17,7 @@ Step 3.1:   Data formatting:
 Step 3.2:   Here are two different functions trying to solve the same problem. I want to fill a new column named 'GENDER_CLOTHING_UNIQUE'.
             Basically it's the same idea as in Step 3.2, but the rows belonging to the same session should get the same number. This time
             it's not about the specific row, but the session as a whole.
-            0: looked only at masculie or gender non-specific clothes
+            0: looked only at masculine or gender non-specific clothes
             1: looked only at feminine or gender non-specific clothes
             2: looked only at gender non-specific clothes
             3: looked at both feminine and masculine clothes
