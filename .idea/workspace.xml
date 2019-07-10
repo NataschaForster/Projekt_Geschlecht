@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="478ddccf-6626-42af-8319-fbb9de406bcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/step4_normalize.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_me.txt" beforeDir="false" afterPath="$PROJECT_DIR$/read_me.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/step2_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/step2_preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step3.2_gender_article_unique.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.2_gender_article_unique.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/step3.3_only_numeric_columns.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.3_only_numeric_columns.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step4_finding_outliers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/step4_normalize.py" beforeDir="false" afterPath="$PROJECT_DIR$/step4_normalize.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,38 +23,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/read_me.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="92">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/step3.1_genderspecific_article.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/step1_geschlecht.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/step3.2_gender_article_unique.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1645">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state relative-caret-position="-221">
+              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -66,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="68">
+              <caret line="4" column="142" selection-start-line="4" selection-start-column="142" selection-end-line="4" selection-end-column="142" />
             </state>
           </provider>
         </entry>
@@ -75,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/step4_normalize.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -85,10 +63,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/step2_preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+            <state relative-caret-position="290">
+              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -129,14 +119,15 @@
         <option value="$PROJECT_DIR$/step3_gender_article.py" />
         <option value="$PROJECT_DIR$/step3.1_gender_article.py" />
         <option value="$PROJECT_DIR$/step3.1_genderspecific_article.py" />
-        <option value="$PROJECT_DIR$/step3.3_only_numeric_columns.py" />
         <option value="$PROJECT_DIR$/step4_finding_outliers.py" />
-        <option value="$PROJECT_DIR$/step3.2_gender_article_unique.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/step4_normalize.py" />
         <option value="$PROJECT_DIR$/step1_feature_analysis.py" />
-        <option value="$PROJECT_DIR$/step2_preprocessing.py" />
         <option value="$PROJECT_DIR$/read_me.txt" />
+        <option value="$PROJECT_DIR$/step4_normalize.py" />
+        <option value="$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py" />
+        <option value="$PROJECT_DIR$/step3.2_gender_article_unique.py" />
+        <option value="$PROJECT_DIR$/step3.3_only_numeric_columns.py" />
+        <option value="$PROJECT_DIR$/step2_preprocessing.py" />
       </list>
     </option>
   </component>
@@ -153,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,11 +152,15 @@
               <item name="projekt_geschlecht2" type="b2602c69:ProjectViewProjectNode" />
               <item name="projekt_geschlecht2" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="projekt_geschlecht2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projekt_geschlecht2" type="462c0819:PsiDirectoryNode" />
+              <item name="Step2_Feature_Analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,10 +289,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.step3.2_gender_article_unique" />
-        <item itemvalue="Python.step3.3_only_numeric_columns" />
-        <item itemvalue="Python.step4_finding_outliers" />
         <item itemvalue="Python.step3.1_genderspecific_article" />
         <item itemvalue="Python.step2_preprocessing" />
+        <item itemvalue="Python.step3.3_only_numeric_columns" />
+        <item itemvalue="Python.step4_finding_outliers" />
       </list>
     </recent_temporary>
   </component>
@@ -315,9 +311,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49194992" visible="true" weight="0.19550858" />
-      <window_info id="Structure" order="1" sideWeight="0.5080501" side_tool="true" visible="true" weight="0.19550858" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.490161" visible="true" weight="0.19550858" />
+      <window_info id="Structure" order="1" sideWeight="0.509839" side_tool="true" visible="true" weight="0.19550858" />
       <window_info id="Favorites" order="2" sideWeight="0.5006974" side_tool="true" weight="0.24966975" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -407,6 +404,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/step1_feature_analysis.py" />
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -414,27 +412,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step1_feature_analysis.py">
+    <entry file="file://$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
+    <entry file="file://$PROJECT_DIR$/step1_geschlecht.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step2_preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+        <state relative-caret-position="120">
+          <caret line="27" selection-start-line="27" selection-end-line="43" selection-end-column="76" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -443,42 +434,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/step3.1_genderspecific_article.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="375">
+          <caret line="34" column="101" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/read_me.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="92">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step1_geschlecht.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/step4_normalize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="142" selection-start-line="4" selection-start-column="142" selection-end-line="4" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/step3.2_gender_article_unique.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1645">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="-221">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step2_preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

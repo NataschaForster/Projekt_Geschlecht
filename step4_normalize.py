@@ -14,7 +14,9 @@ g = sns.pairplot(df)
 column_list = df.column.tolist()
 
 for column in column_list:
-    x_array = np.array(df[column])
-    normalized_X = preprocessing.normalize([x_array])
+    column_array = np.array(df[column])
+    normalized_column = preprocessing.normalize([column_array])
 
-    column = normalized_X
+    df[column] = normalized_column
+
+df.to_csv("datasets/preprocessing4_normalize/normalized_data.csv", sep=';', index=False)

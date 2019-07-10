@@ -54,6 +54,7 @@ mean_coupon = float(df['COUPONWERT'].mean()) # equals 0, so irrelevant
 mean_anzahl = float(df['ANZAHL'].mean()) #isn't 0, but replacing doesn't make much sense
 mean_list = [mean_view, mean_groesse, mean_absatz, mean_pprice,
              mean_bestellsumme, mean_coupon, mean_anzahl]
+print(mean_view, '_________________________________')
 print(mean_list)
 relevant_means = [mean_view, mean_absatz, mean_anzahl]
 
@@ -70,7 +71,7 @@ def replaceMean(s, mean):
     return pd.Series(list_with_mean)
 
 #REPLACING ALL RELEVANT MEANS
-df['VIEWTIME_IN_S'] = replaceMean(df['VIEWTIME_IN_S'], float(df['VIEWTIME_IN_S'].mean()))
+df['VIEWTIME_IN_S'] = replaceMean(df['VIEWTIME_IN_S'], int(df['VIEWTIME_IN_S'].mean()))
 df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
 
 #WRITING A NEW HEADER NEEDED IN THE NEXT STEP
