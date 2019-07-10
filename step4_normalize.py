@@ -4,19 +4,16 @@ import seaborn as sns
 from sklearn import preprocessing
 import numpy as np
 
-df = pd.read_csv("datasets/preprocessing3.3_only_numeric_columns/numeric_columns_only.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
-
-# PLOT EACH COLUMN AND ALL COLUMNS CORRELATED WITH EACH OTHER
-sns.set(style="ticks", color_codes=True)
-g = sns.pairplot(df)
+df = pd.read_csv("datasets/preprocessing3.3_numeric_columns/numeric_columns_only.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
 
 # NORMALIZE DATA AND GET RID OF OUTLIERS
-column_list = df.column.tolist()
+column_list = df.columns.tolist()
 
 for column in column_list:
-    column_array = np.array(df[column])
-    normalized_column = preprocessing.normalize([column_array])
+    if column != 'CLOTHING_GENDER_UNIQUE':  #this column should not get normalized
+        column_df = df[column]
+        column_df_list = list(preprocessing.normalize([column_df])[0])
 
-    df[column] = normalized_column
+        df[column] = pd.Series(column_df_list)
 
 df.to_csv("datasets/preprocessing4_normalize/normalized_data.csv", sep=';', index=False)

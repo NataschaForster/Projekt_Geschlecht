@@ -4,7 +4,7 @@ import seaborn as sns
 from sklearn import preprocessing
 import numpy as np
 
-df = pd.read_csv("datasets/preprocessing3.3_only_numeric_columns/numeric_columns_only.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
+df = pd.read_csv("C:\Projekt\projekt_geschlecht2/datasets/preprocessing3.3_numeric_columns/numeric_columns_only.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
 
 # PLOT CORRELATION MATRIX
 plt.matshow(df.corr().style.background_gradient(cmap='coolwarm').set_precision(2))

@@ -26,5 +26,5 @@ Step 3.2:   Here are two different functions trying to solve the same problem. I
 Step 3.3:   Creating a new dataframe with only numeric and important columns. (This step can be done much earlier to save time and disk space.
             I simply didn't know the dataset well enough.)
 
-Step 4:     Finding outliers and replacing them with 0 and the mean.
+Step 4:     Normalizing the data and deleting outliers.
             Data preprocessing done.
