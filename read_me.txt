@@ -10,6 +10,7 @@ Step 2:     Detecting NaN values and replacing them at first with 0. Some column
 
 Step 3.1:   Data formatting:
             Searching for gender specific words in column 'CONTENT_NAME' and filling added column 'GENDER_CLOTHING' with matching numbers.
+
             0: masculine clothing
             1: feminine clothing
             2: gender non-specific clothing

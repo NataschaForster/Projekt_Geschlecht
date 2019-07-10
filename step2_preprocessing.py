@@ -52,11 +52,12 @@ mean_pprice = float(df['PPRICE'].mean()) # equals 0, so irrelevant
 mean_bestellsumme = float(df['BESTELLSUMME'].mean()) # equals 0, so irrelevant
 mean_coupon = float(df['COUPONWERT'].mean()) # equals 0, so irrelevant
 mean_anzahl = float(df['ANZAHL'].mean()) #isn't 0, but replacing doesn't make much sense
-mean_list = [mean_view, mean_groesse, mean_absatz, mean_pprice, mean_bestellsumme, mean_coupon, mean_anzahl]
+mean_list = [mean_view, mean_groesse, mean_absatz, mean_pprice,
+             mean_bestellsumme, mean_coupon, mean_anzahl]
 print(mean_list)
 relevant_means = [mean_view, mean_absatz, mean_anzahl]
 
-#function
+# REPLACING WITH MEAN
 def replaceMean(s, mean):
     column_list = s.to_list()
     list_with_mean = []
