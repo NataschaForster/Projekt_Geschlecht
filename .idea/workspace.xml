@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="478ddccf-6626-42af-8319-fbb9de406bcf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_me.txt" beforeDir="false" afterPath="$PROJECT_DIR$/read_me.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/step3.3_only_numeric_columns.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.3_only_numeric_columns.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step4_normalize.py" beforeDir="false" afterPath="$PROJECT_DIR$/step4_normalize.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/read_me.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -29,43 +27,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/step4_normalize.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="238">
+              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -98,11 +66,11 @@
         <option value="$PROJECT_DIR$/step1_feature_analysis.py" />
         <option value="$PROJECT_DIR$/step3.2_gender_article_unique.py" />
         <option value="$PROJECT_DIR$/step2_preprocessing.py" />
-        <option value="$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py" />
         <option value="$PROJECT_DIR$/read_me.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/step4_normalize.py" />
         <option value="$PROJECT_DIR$/step3.3_only_numeric_columns.py" />
+        <option value="$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py" />
       </list>
     </option>
   </component>
@@ -155,7 +123,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.step4_normalize">
+  <component name="RunManager" selected="Python.step1_feature_analysis">
     <configuration name="step1_feature_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="projekt_geschlecht2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -263,9 +231,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.step1_feature_analysis" />
         <item itemvalue="Python.step4_normalize" />
         <item itemvalue="Python.step3.3_only_numeric_columns" />
-        <item itemvalue="Python.step1_feature_analysis" />
         <item itemvalue="Python.step3.2_gender_article_unique" />
         <item itemvalue="Python.step3.1_genderspecific_article" />
       </list>
@@ -287,12 +255,12 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49078342" visible="true" weight="0.19550858" />
-      <window_info id="Structure" order="1" sideWeight="0.5092166" side_tool="true" visible="true" weight="0.19550858" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49093446" visible="true" weight="0.19550858" />
+      <window_info id="Structure" order="1" sideWeight="0.50906557" side_tool="true" visible="true" weight="0.19550858" />
       <window_info id="Favorites" order="2" sideWeight="0.5006974" side_tool="true" weight="0.24966975" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39470014" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39470014" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39888424" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,13 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/read_me.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -430,14 +391,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py">
+    <entry file="file://C:/Temp/Temp1_jupyter.zip/jupyter/notebooks/plot_data.ipynb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-2652" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/step4_normalize.py">
@@ -453,7 +409,24 @@
     <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <caret line="4" column="196" selection-start-line="4" selection-start-column="160" selection-end-line="4" selection-end-column="196" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Step2_Feature_Analysis/step1_feature_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_me.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

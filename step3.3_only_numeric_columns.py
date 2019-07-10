@@ -2,7 +2,7 @@ import pandas as pd
 
 df = pd.read_csv("datasets/preprocessing3.2_gender_clothing_unique/whole_data.csv", error_bad_lines=False, sep=';', low_memory=False)
 num_df = pd.DataFrame()
-numeric_columns = pd.DataFrame(df[['ANREDE', 'ANZAHL', 'ABSATZ', 'PPRICE', 'GROESSE', 'BESTELLSUMME', 'COUPONWERT', 'MARKTKENNZEICHEN', 'VIEWTIME_IN_S', 'CLOTHING_GENDER_UNIQUE']])
+numeric_columns = pd.DataFrame(df[['ANREDE', 'ANZAHL', 'ABSATZ', 'PPRICE', 'GROESSE', 'BESTELLSUMME', 'COUPONWERT', 'MARKTKENNZEICHEN', 'VIEWTIME_IN_S', 'CLOTHING_GENDER_UNIQUE', 'CLOTHING_GENDER']])
 print('got numeric columns')
 
 # GETTING A NEW DATA FRAME WITH ONLY IMPORTANT/NUMERIC COLUMNS
