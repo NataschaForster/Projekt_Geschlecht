@@ -77,9 +77,15 @@ df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
 #WRITING A NEW HEADER NEEDED IN THE NEXT STEP
 CLOTHING_GENDER = []
 CLOTHING_GENDER_UNIQUE = []
+SEARCH_GENDER = []
+SEARCH_GENDER_UNIQUE = []
+COMBINED_GENDER = []
 
 df['CLOTHING_GENDER'] = pd.Series(CLOTHING_GENDER)
 df['CLOTHING_GENDER_UNIQUE'] = pd.Series(CLOTHING_GENDER_UNIQUE)
+df['SEARCH_GENDER'] = pd.Series(SEARCH_GENDER)
+df['SEARCH_GENDER_UNIQUE'] = pd.Series(SEARCH_GENDER_UNIQUE)
+df['COMBINED_GENDER'] = pd.Series(COMBINED_GENDER)
 
 
 df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", sep=';', index=False)

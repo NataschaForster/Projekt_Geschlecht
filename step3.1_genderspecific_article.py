@@ -5,17 +5,19 @@ df = pd.read_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.
 #NEW COLUMN WITH "WATCHED WOMENS/MENS CLOTHING" BY SEARCHING IN URL STRING
 def gender_article(s):
     content_list = s.to_list()
-    word_list_damen = ["Damen", "BHs", "Kleider", "Blusen"]
+    word_list_damen = ["Damen", "damen" "BHs", "Kleider", "Blusen"]
+    word_list_herren = ["Herren", "herren", "Pollunder", "Boxershorts"]
     new_column_list = []
     counter = 0
     counter_herren = 0
 
     for line in content_list:
         for word in word_list_damen:
-            if "Herren" in str(line):
-                counter_herren = counter_herren + 1
             if str(word) in str(line):
                 counter = counter + 1
+        for word in word_list_herren:
+            if str(word) in str(line):
+                counter_herren += 1
 
         if counter_herren > 0:
             new_column_list.append(0)#masculine clothing
