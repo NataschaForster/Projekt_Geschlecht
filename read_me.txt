@@ -23,8 +23,20 @@ Step 3.2:   Here are two different functions trying to solve the same problem. I
             2: looked only at gender non-specific clothes
             3: looked at both feminine and masculine clothes
 
+            Added two new columns. The same is happening, but this time for the content in 'SEACH_QUERY'.
+
+Step 3.2.2: Combining all four new columns in one.
+            0: looked only at masculine or gender non-specific clothes
+            1: looked only at feminine or gender non-specific clothes
+            2: looked only at gender non-specific clothes
+            3: looked at both feminine and masculine clothes
+
 Step 3.3:   Creating a new dataframe with only numeric and important columns. (This step can be done much earlier to save time and disk space.
             I simply didn't know the dataset well enough.)
 
 Step 4:     Normalizing the data and deleting outliers.
             Data preprocessing done.
+
+Step 5:     Creating a dataframe with equal men and women rows.
+
+Step 6:     Algorithm and predition.

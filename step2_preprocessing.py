@@ -87,5 +87,4 @@ df['SEARCH_GENDER'] = pd.Series(SEARCH_GENDER)
 df['SEARCH_GENDER_UNIQUE'] = pd.Series(SEARCH_GENDER_UNIQUE)
 df['COMBINED_GENDER'] = pd.Series(COMBINED_GENDER)
 
-
 df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", sep=';', index=False)

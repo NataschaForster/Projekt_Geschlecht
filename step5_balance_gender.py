@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("datasets/preprocessing3.2_gender_clothing_unique/whole_data.csv", error_bad_lines=False, sep=';', low_memory=False)
+df = pd.read_csv("datasets/preprocessing3.3_numeric_columns/numeric_columns_only.csv", error_bad_lines=False, sep=';', low_memory=False)
 
 male = df[df.ANREDE == 1]
 female = df[df.ANREDE == 0]
