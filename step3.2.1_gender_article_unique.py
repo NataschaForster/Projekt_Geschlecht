@@ -122,11 +122,6 @@ frame.to_csv("datasets/preprocessing3.2_gender_clothing_unique/whole_data.csv", 
 print("finished")
 
 
-
-
-
-
-
 # THIS PART IS ONLY NEEDED, IF ONE WANTS TO CREATE MANY SMALL CSVS
 '''''''''
 # SPLITING DATASET IN SMALLER SETS WITH ONLY ONE SESSION EACH AND FILLING THE LAST COLUMN

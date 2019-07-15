@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
+df = pd.read_csv("datasets/preprocessing3.0_sorting_session/preprocessing_session_sorted.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
 
 #NEW COLUMN WITH "WATCHED WOMENS/MENS CLOTHING" BY SEARCHING IN URL STRING
 def gender_article(s):

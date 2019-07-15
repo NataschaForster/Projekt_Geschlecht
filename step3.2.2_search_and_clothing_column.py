@@ -17,21 +17,20 @@ def combine_gender():
         rows_with_session_index = reset[reset["SESSION_ID"] == session].index.tolist()
 
         # CHECKING IF LOOKED AT GENDER SPECIFIC CLOTHING
-        for index in rows_with_session_index:
-            row = temp_df.iloc[index]
-            value = row['SEARCH_GENDER_UNIQUE']
-            value2 = row['CLOTHING_GENDER_UNIQUE']
+        row = temp_df.iloc[rows_with_session_index[0]]
+        value = row['SEARCH_GENDER_UNIQUE']
+        value2 = row['CLOTHING_GENDER_UNIQUE']
 
-            if value == 1:
-                bool_damen = True
-            elif value == 0:
-                bool_herren = True
-            elif value2 == 1:
-                bool_damen = True
-            elif value2 == 0:
-                bool_herren = True
+        if value == 1:
+            bool_damen = True
+        if value == 0:
+            bool_herren = True
+        if value2 == 1:
+            bool_damen = True
+        if value2 == 0:
+            bool_herren = True
 
-        # COMPARING WHAT HAS BEEN LOOKED AT AND THEN FILLING ALL ROWS BELONING TO ONE SESSION WITH THE SAME NUMBER
+        # COMPARING WHAT HAS BEEN LOOKED AT AND THEN FILLING ALL ROWS BELONGING TO ONE SESSION WITH THE SAME NUMBER
         if bool_damen and bool_herren:
             for i in range(0, len(rows_with_session_index)):
                 new_column_list.append(3)
@@ -45,6 +44,8 @@ def combine_gender():
             for i in range(0, len(rows_with_session_index)):
                 new_column_list.append(2)
 
+        if counter == 5:
+            break
         counter = counter + 1
         print(str((counter / len(unique_session_list))*100) + "%")
 
