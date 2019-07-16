@@ -44,8 +44,6 @@ def combine_gender():
             for i in range(0, len(rows_with_session_index)):
                 new_column_list.append(2)
 
-        if counter == 5:
-            break
         counter = counter + 1
         print(str((counter / len(unique_session_list))*100) + "%")
 

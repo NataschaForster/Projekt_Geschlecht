@@ -5,8 +5,8 @@ df = pd.read_csv("datasets/preprocessing3.3_numeric_columns/numeric_columns_only
 male = df[df.ANREDE == 1]
 female = df[df.ANREDE == 0]
 
-print(male.count()) #51366
-female = female[:51366]
+print(male.count()) #85872
+female = female[:85872]
 print(female.count())
 
 female = female.append(male)

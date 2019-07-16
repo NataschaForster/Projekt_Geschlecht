@@ -1,8 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn import preprocessing
-import numpy as np
 
 df = pd.read_csv("datasets/preprocessing3.3_numeric_columns/numeric_columns_only.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
 
@@ -10,7 +7,7 @@ df = pd.read_csv("datasets/preprocessing3.3_numeric_columns/numeric_columns_only
 column_list = df.columns.tolist()
 
 for column in column_list:
-    if column != 'CLOTHING_GENDER_UNIQUE':  #this column should not get normalized
+    if column != 'CLOTHING_GENDER_UNIQUE' or 'COMBINED_GENDER' or 'ANREDE':  #this column should not get normalized
         column_df = df[column]
         column_df_list = list(preprocessing.normalize([column_df])[0])
 
