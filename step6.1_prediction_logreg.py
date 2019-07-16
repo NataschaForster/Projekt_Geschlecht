@@ -5,6 +5,7 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 
 df = pd.read_csv("datasets/preprocessing5_balance_gender/balanced_gender.csv", error_bad_lines=False, sep=';', low_memory=False)
 
+# SPLI DATA IN TRAIN AND TEST SETS
 y = df['ANREDE']
 X = df.drop(['ANREDE'], axis=1) #, 'CLOTHING_GENDER_UNIQUE'
 
