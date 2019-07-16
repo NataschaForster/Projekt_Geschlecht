@@ -14,12 +14,10 @@ y = df['ANREDE']
 X = df.drop(['ANREDE'], axis=1) #, 'CLOTHING_GENDER_UNIQUE'
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 
-""""""""" no positive effect on outcome
 # SCALING DATA
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
-"""""""""
 
 # DECISION TREE MODEL
 clf_gini = DecisionTreeClassifier(random_state=1, max_depth=3, min_samples_leaf=5)
