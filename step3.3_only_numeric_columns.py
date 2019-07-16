@@ -2,11 +2,13 @@ import pandas as pd
 
 df = pd.read_csv("datasets/preprocessing3.2_gender_clothing_unique/combined_gender_5columns.csv", error_bad_lines=False, sep=';', low_memory=False)
 num_df = pd.DataFrame()
-numeric_columns = pd.DataFrame(df[['ANREDE', 'COMBINED_GENDER']])
+numeric_columns = pd.DataFrame(df[['ANREDE', 'COMBINED_GENDER', 'VIEWTIME_IN_S', 'CLOTHING_GENDER_UNIQUE',
+                                   'CLOTHING_GENDER', 'SEARCH_GENDER', 'SEARCH_GENDER_UNIQUE', 'ANZAHL', 'ABSATZ',
+                                   'PPRICE', 'GROESSE', 'BESTELLSUMME', 'COUPONWERT', 'MARKTKENNZEICHEN'
+]])
 
 # OTHER NUMERIC COLUMNS, THAT DIDNT GET PUT IN
-# 'VIEWTIME_IN_S', 'CLOTHING_GENDER_UNIQUE', 'CLOTHING_GENDER', 'SEARCH_GENDER', 'SEARCH_GENDER_UNIQUE', 'ANZAHL', 'ABSATZ', 'PPRICE', 'GROESSE', 'BESTELLSUMME', 'COUPONWERT', 'MARKTKENNZEICHEN'
-
+#
 
 print('got numeric columns')
 
