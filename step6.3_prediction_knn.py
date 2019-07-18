@@ -1,4 +1,5 @@
 import pandas as pd
+import sys
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
@@ -20,7 +21,7 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-
+'''''''''
 # SEARCHING FOR BEST PARAMETERS
 grid_params = {'n_neighbors': [3,5,7,9,11],
                'weights': ['uniform', 'distance'],
@@ -36,11 +37,11 @@ gs_results = gs.fit(X_train, y_train)
 
 print(gs_results.best_score_)
 print(gs_results.best_estimator_)
-print(gs_results.best_params_)
-
+print(gs_results.best_params_) n_neighbors=9, weights='distance', metric='manhattan'
+'''''''''
 
 # Create KNN Classifier
-knn = KNeighborsClassifier(gs_results)
+knn = KNeighborsClassifier(n_neighbors=9, weights='distance', metric='manhattan')
 
 # Train the model using the training sets
 knn.fit(X_train, y_train)
@@ -49,11 +50,8 @@ knn.fit(X_train, y_train)
 y_pred = knn.predict(X_test)
 
 # Model Accuracy, how often is the classifier correct?
-print(confusion_matrix(y_test, y_pred))
-print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
+print("Erfolgsrate des kNN Algorithmus: ", round(metrics.accuracy_score(y_test, y_pred),3)*100, "%")
 
-
-
-
-
-
+# ECHO OUTPUT IN FILE
+sys.stdout = open("c:\\Projekt\projekt_geschlecht2\Echo_files\knn.txt", "w")
+print("k-NearestNeighbor got an accuracy score of ", round(metrics.accuracy_score(y_test, y_pred), 3)*100, "%.")

@@ -1,8 +1,9 @@
+# IMPORT BOUNDARIES 
 import pandas as pd
 import numpy as np
 import glob
 
-#CONFIGURE CONSOLE PROPERTIES
+# CONFIGURE CONSOLE PROPERTIES
 DESIRED_WIDTH = 320
 pd.set_option('display.width', DESIRED_WIDTH)
 np.set_printoptions(linewidth=DESIRED_WIDTH)
@@ -10,10 +11,10 @@ pd.set_option('display.max_columns', 15)
 pd.options.display.max_rows = None
 pd.set_option('max_colwidth', 300)
 
-create_new = True
+create_new = False
 
 if create_new:
-    #CHUNKING DATAFRAME INTO 108 SMALLER ONES; NO EMPTY GENDER FIELDS REMAINING
+    # CHUNKING DATAFRAME INTO 108 SMALLER ONES; NO EMPTY GENDER FIELDS REMAINING
     for i in range(0, 54):
         df = pd.read_csv('datasets/originaldaten/whole_data.csv', sep=';', low_memory=False, nrows=20000, skiprows=range(1, i*20000), encoding='latin-1')
         male = df[df.ANREDE == 1]
@@ -24,7 +25,7 @@ if create_new:
 
 
 
-#CREATING ONE CSV FILE WITH THE RECENTLY CREATED ONES
+# CREATING ONE CSV FILE WITH THE RECENTLY CREATED ONES
 path = r'C:\Projekt\projekt_geschlecht2\datasets\preprocessing1_only_gender'
 all_files = glob.glob(path + "/*.csv")
 

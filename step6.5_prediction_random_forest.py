@@ -1,10 +1,11 @@
-import numpy as np
 import pandas as pd
+import sys
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.preprocessing import StandardScaler
+
 # LOAD DATA
 df = pd.read_csv("datasets/preprocessing5_balance_gender/balanced_gender.csv", error_bad_lines=False, sep=';', low_memory=False)
 
@@ -18,10 +19,11 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
+'''''''''
 # SEARCHING FOR BEST PARAMETERS
-grid_params = {'n_estimator': [200, 700],
-               'max_features': ['sqrt', 'log2'],
-               'max_depth': [8, 9, 10, 11, 12]}
+grid_params = {'n_estimators': [500],
+               'max_features': ['sqrt'],
+               'max_depth': [225]}
 
 gs = GridSearchCV(RandomForestClassifier(),
                   grid_params,
@@ -35,10 +37,15 @@ print(gs_results.best_score_)
 print(gs_results.best_estimator_)
 print(gs_results.best_params_)
 
+'''''''''
 # FIT MODEL
-regressor = RandomForestClassifier(gs_results)
+regressor = RandomForestClassifier(max_depth=225, max_features='sqrt', n_estimators=500)
 regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_test)
 
 # SHOW ACCURACY
 print("Random Forest: ", accuracy_score(y_test, y_pred.round(), normalize=True))
+
+# ECHO OUTPUT IN FILE
+sys.stdout = open("c:\\Projekt\projekt_geschlecht2\Echo_files\random_forest.txt", "w")
+print("Random Forest got an accuracy score of ", round(accuracy_score(y_test, y_pred), 3)*100, "%.")

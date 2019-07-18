@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import sys
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
@@ -28,3 +29,7 @@ predictions = clf_gini.predict(X_test)
 
 # SHOW ACCURACY
 print("Decision Tree: ", accuracy_score(y_test, predictions))
+
+# ECHO OUTPUT IN FILE
+sys.stdout = open("c:\\Projekt\projekt_geschlecht2\Echo_files\decision_tree.txt", "w")
+print("Decision Tree got an accuracy score of ", round(accuracy_score(y_test, predictions), 3)*100, "%.")
