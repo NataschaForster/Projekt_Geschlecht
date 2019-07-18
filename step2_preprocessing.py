@@ -1,11 +1,12 @@
+# IMPORT BOUNDARIES
 import pandas as pd
 import math
 
-#SCANNING DATASET
+# SCANNING DATASET
 df = pd.read_csv('datasets/preprocessing1_only_gender/dataset_with_gender.csv', error_bad_lines=False, header=0, sep=';', low_memory=False)
 
 
-#FUNCTION REPLACING NAN WITH 0 IN COLUMNS
+# FUNCTION REPLACING NAN WITH 0 IN COLUMNS
 def cleanSeries(s):
     list = s.to_list()
     list_prepared = []
@@ -25,7 +26,8 @@ def cleanSeries(s):
             list_prepared.append(0)
     return pd.Series(list_prepared)
 
-#FILLING THE DATAFRAME WITH 0
+
+# FILLING THE DATAFRAME WITH 0
 df['VIEWTIME_IN_S'] = cleanSeries(df['VIEWTIME_IN_S'])
 df['ABSATZ'] = cleanSeries(df['ABSATZ'])
 df['PPRICE'] = cleanSeries(df['PPRICE'])
@@ -38,13 +40,13 @@ df['ARTIKELNR'] = cleanSeries(df['ARTIKELNR'])
 df['ANZAHL'] = cleanSeries(df['ANZAHL'])
 df['ARTIKELNR'] = cleanSeries(df['ARTIKELNR'])
 
-#WRITING A NEW CSV
+# WRITING A NEW CSV
 df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_zero.csv.txt", sep=';',  index=False)
 
 
-#FUNCTION REPLACING 0 WITH MEAN
-#calculating the mean of the used columns
-#which columns are worth replacing with the mean?
+# FUNCTION REPLACING 0 WITH MEAN
+# calculating the mean of the used columns
+# which columns are worth replacing with the mean?
 mean_view = int(df['VIEWTIME_IN_S'].mean())
 mean_groesse = float(df['GROESSE'].mean()) #replacng doesnt make sense
 mean_absatz = float(df['ABSATZ'].mean())
@@ -54,11 +56,10 @@ mean_coupon = float(df['COUPONWERT'].mean())
 mean_anzahl = float(df['ANZAHL'].mean()) #isn't 0, but replacing doesn't make much sense
 mean_list = [mean_view, mean_groesse, mean_absatz, mean_pprice,
              mean_bestellsumme, mean_coupon, mean_anzahl]
-print('_________________________________')
-print(mean_list)
+
 
 # REPLACING WITH MEAN
-def replaceMean(s, mean):
+def replace_mean(s, mean):
 
     column_list = s.to_list()
     list_with_mean = []
@@ -70,25 +71,28 @@ def replaceMean(s, mean):
             list_with_mean.append(float(element))
     return pd.Series(list_with_mean)
 
-#REPLACING ALL RELEVANT MEANS
-df['VIEWTIME_IN_S'] = replaceMean(df['VIEWTIME_IN_S'], int(df['VIEWTIME_IN_S'].mean()))
-df['ABSATZ'] = replaceMean(df['ABSATZ'], float(df['ABSATZ'].mean()))
-df['PPRICE'] = replaceMean(df['PPRICE'], float(df['PPRICE'].mean()))
-df['BESTELLSUMME'] = replaceMean(df['BESTELLSUMME'], float(df['BESTELLSUMME'].mean()))
-df['COUPONWERT'] = replaceMean(df['COUPONWERT'], float(df['COUPONWERT'].mean()))
-df['ANZAHL'] = replaceMean(df['ANZAHL'], float(df['ANZAHL'].mean()))
 
-#WRITING A NEW HEADER NEEDED IN THE NEXT STEP
+# REPLACING ALL RELEVANT MEANS
+df['VIEWTIME_IN_S'] = replace_mean(df['VIEWTIME_IN_S'], int(df['VIEWTIME_IN_S'].mean()))
+df['ABSATZ'] = replace_mean(df['ABSATZ'], float(df['ABSATZ'].mean()))
+df['PPRICE'] = replace_mean(df['PPRICE'], float(df['PPRICE'].mean()))
+df['BESTELLSUMME'] = replace_mean(df['BESTELLSUMME'], float(df['BESTELLSUMME'].mean()))
+df['COUPONWERT'] = replace_mean(df['COUPONWERT'], float(df['COUPONWERT'].mean()))
+df['ANZAHL'] = replace_mean(df['ANZAHL'], float(df['ANZAHL'].mean()))
+
+# WRITING A NEW HEADER NEEDED IN THE NEXT STEP
 CLOTHING_GENDER = []
 CLOTHING_GENDER_UNIQUE = []
 SEARCH_GENDER = []
 SEARCH_GENDER_UNIQUE = []
 COMBINED_GENDER = []
 
+# FILLING NEW HEADER WITH EMPTY P.SERIES
 df['CLOTHING_GENDER'] = pd.Series(CLOTHING_GENDER)
 df['CLOTHING_GENDER_UNIQUE'] = pd.Series(CLOTHING_GENDER_UNIQUE)
 df['SEARCH_GENDER'] = pd.Series(SEARCH_GENDER)
 df['SEARCH_GENDER_UNIQUE'] = pd.Series(SEARCH_GENDER_UNIQUE)
 df['COMBINED_GENDER'] = pd.Series(COMBINED_GENDER)
 
+# CREATING NEW CSV
 df.to_csv("datasets/preprocessing2_filling_empty_cells/preprocessed_mean.csv.txt", sep=';', index=False)

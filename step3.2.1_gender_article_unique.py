@@ -1,14 +1,16 @@
+# IMPORT BOUNDARIES
 import pandas as pd
 import glob
 import shutil
 import os
 
 
-# FUNCTION FOR NEW COLUMN: CHECKING IF LOOKED FOR CLOTHING FOR BOTH GENDER
+# CHUNKING THE DATAFRAME TO 54 SMALL ONES
 for i in range(0, 54):
-    df = pd.read_csv('datasets/preprocessing3.1_genderspecific_clothing/preprocessing_genderspecific_article.csv', sep=';', low_memory=False, nrows=20000,
-                     skiprows=range(1, i * 20000), encoding='latin-1')
+    df = pd.read_csv('datasets/preprocessing3.1_genderspecific_clothing/preprocessing_genderspecific_article.csv',
+                     sep=';', low_memory=False, nrows=20000, skiprows=range(1, i * 20000), encoding='latin-1')
 
+    # FUNCTION FOR NEW COLUMN: CHECKING IF LOOKED FOR CLOTHING FOR BOTH GENDER
     def content_unique_session():
         temp_df = df
         new_column_list = []
@@ -53,6 +55,8 @@ for i in range(0, 54):
 
         return pd.Series(new_column_list)
 
+
+    # CHECKING FOR GENDER SPECIFIC ARTICLES IN SEARCH BAR
     def search_gender_unique():
         temp_df = df
         new_column_list = []
@@ -119,10 +123,9 @@ for filename in all_files:
 
 frame = pd.concat(li, axis=0, ignore_index=True, sort=True)
 frame.to_csv("datasets/preprocessing3.2_gender_clothing_unique/whole_data.csv", sep=';', index=False)
-print("finished")
-
 
 # THIS PART IS ONLY NEEDED, IF ONE WANTS TO CREATE MANY SMALL CSVS
+# STILL INCLUDED FOR COLLEAGUE TO IMPLEMENT IN JAVA WITH APACHE BEAM
 '''''''''
 # SPLITING DATASET IN SMALLER SETS WITH ONLY ONE SESSION EACH AND FILLING THE LAST COLUMN
 # doesnt work for me, cause laptop too slow
@@ -172,7 +175,6 @@ def content_unique_session_separate_csv():
         counter = counter + 1
         print("{} csv done".format(session))
         temp_df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/all_sessions/session{}.csv".format(counter), sep=';', index=False)
-
 
 
 # DELETING OLD CSVS AND CREATING FOLDER

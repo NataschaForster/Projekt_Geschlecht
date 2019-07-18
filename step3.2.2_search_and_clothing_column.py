@@ -1,8 +1,11 @@
+# IMPORT BOUNDARIES
 import pandas as pd
 
+# LOAD DATA
 df = pd.read_csv("datasets/preprocessing3.2_gender_clothing_unique/whole_data.csv", error_bad_lines=False, header=0, sep=';', low_memory=False)
 
 
+# FUNCTION TO COMBINE ALL FOUR NEW COLUMNS
 def combine_gender():
     temp_df = df
     new_column_list = []
@@ -49,6 +52,9 @@ def combine_gender():
 
     return pd.Series(new_column_list)
 
+
+# FILL NEW COLUMN
 df['COMBINED_GENDER'] = combine_gender()
 
+# CREATE NEW CSV
 df.to_csv("datasets/preprocessing3.2_gender_clothing_unique/combined_gender_5columns.csv", sep=';', index=False)

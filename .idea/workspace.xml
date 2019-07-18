@@ -3,12 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="478ddccf-6626-42af-8319-fbb9de406bcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step1_geschlecht.py" beforeDir="false" afterPath="$PROJECT_DIR$/step1_geschlecht.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step2_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/step2_preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step3.0_sorting_dataframe_by_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.0_sorting_dataframe_by_session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step3.1_genderspecific_article.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.1_genderspecific_article.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step3.2.1_gender_article_unique.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.2.1_gender_article_unique.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step3.2.2_search_and_clothing_column.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.2.2_search_and_clothing_column.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step3.3_only_numeric_columns.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.3_only_numeric_columns.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step4_normalize.py" beforeDir="false" afterPath="$PROJECT_DIR$/step4_normalize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step5_balance_gender.py" beforeDir="false" afterPath="$PROJECT_DIR$/step5_balance_gender.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/step6.1_prediction_logreg.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.1_prediction_logreg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step6.2_predicition_svm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/step6.3_prediction_knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.3_prediction_knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step6.4_prediction_decision_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.4_prediction_decision_tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step6.5_prediction_random_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.5_prediction_random_forest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step6.3_prediction_knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.2_prediction_knn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step6.4_prediction_decision_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.3_prediction_decision_tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step6.5_prediction_random_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.4_prediction_random_forest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step6.6_prediction_neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.5prediction_neural_network.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +29,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/step6.5_prediction_random_forest.py">
+        <entry file="file://$PROJECT_DIR$/step6.5prediction_neural_network.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#1#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,25 +70,29 @@
         <option value="$PROJECT_DIR$/step5_prediction_model.py" />
         <option value="$PROJECT_DIR$/read_me.txt" />
         <option value="$PROJECT_DIR$/step3.2_gender_article_unique.py" />
-        <option value="$PROJECT_DIR$/step2_preprocessing.py" />
-        <option value="$PROJECT_DIR$/step3.0_sorting_dataframe_by_session.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/step3.1_genderspecific_article.py" />
         <option value="$PROJECT_DIR$/read_me.md" />
-        <option value="$PROJECT_DIR$/step3.2.2_search_and_clothing_column.py" />
-        <option value="$PROJECT_DIR$/step5_balance_gender.py" />
         <option value="$PROJECT_DIR$/step6_prediction_model.py" />
         <option value="$PROJECT_DIR$/step7_predicition_svm.py" />
-        <option value="$PROJECT_DIR$/step4_normalize.py" />
         <option value="$PROJECT_DIR$/step6.2_predicition_svm.py" />
         <option value="$PROJECT_DIR$/wtep6.4_prediction_decision_tree.py" />
-        <option value="$PROJECT_DIR$/step6.6_prediction_neural_network.py" />
-        <option value="$PROJECT_DIR$/step3.3_only_numeric_columns.py" />
         <option value="$PROJECT_DIR$/step1_geschlecht.py" />
-        <option value="$PROJECT_DIR$/step6.1_prediction_logreg.py" />
         <option value="$PROJECT_DIR$/step6.3_prediction_knn.py" />
         <option value="$PROJECT_DIR$/step6.4_prediction_decision_tree.py" />
+        <option value="$PROJECT_DIR$/step2_preprocessing.py" />
+        <option value="$PROJECT_DIR$/step3.0_sorting_dataframe_by_session.py" />
+        <option value="$PROJECT_DIR$/step3.1_genderspecific_article.py" />
+        <option value="$PROJECT_DIR$/step3.2.1_gender_article_unique.py" />
+        <option value="$PROJECT_DIR$/step3.2.2_search_and_clothing_column.py" />
+        <option value="$PROJECT_DIR$/step3.3_only_numeric_columns.py" />
+        <option value="$PROJECT_DIR$/step4_normalize.py" />
+        <option value="$PROJECT_DIR$/step5_balance_gender.py" />
+        <option value="$PROJECT_DIR$/step6.1_prediction_logreg.py" />
+        <option value="$PROJECT_DIR$/step6.2_prediction_knn.py" />
+        <option value="$PROJECT_DIR$/step6.3_prediction_decision_tree.py" />
         <option value="$PROJECT_DIR$/step6.5_prediction_random_forest.py" />
+        <option value="$PROJECT_DIR$/step6.6_prediction_neural_network.py" />
+        <option value="$PROJECT_DIR$/step6.5prediction_neural_network.py" />
       </list>
     </option>
   </component>
@@ -105,6 +116,11 @@
             <path>
               <item name="projekt_geschlecht2" type="b2602c69:ProjectViewProjectNode" />
               <item name="projekt_geschlecht2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt_geschlecht2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projekt_geschlecht2" type="462c0819:PsiDirectoryNode" />
+              <item name="Echo_files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="projekt_geschlecht2" type="b2602c69:ProjectViewProjectNode" />
@@ -133,70 +149,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.step6.5_prediction_random_forest">
-    <configuration name="step5_balance_gender" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="projekt_geschlecht2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step5_balance_gender.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="step6.1_prediction_logreg" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="projekt_geschlecht2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.1_prediction_logreg.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="step6.3_prediction_knn" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="projekt_geschlecht2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.3_prediction_knn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.step6.4_prediction_random_forest">
     <configuration name="step6.4_prediction_decision_tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="projekt_geschlecht2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -209,7 +162,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.4_prediction_decision_tree.py" />
+      <option name="SCRIPT_NAME" value="C:\Projekt\projekt_geschlecht2\step6.3_prediction_decision_tree.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="step6.4_prediction_random_forest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="projekt_geschlecht2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.4_prediction_random_forest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -230,7 +204,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.5_prediction_random_forest.py" />
+      <option name="SCRIPT_NAME" value="C:\Projekt\projekt_geschlecht2\step6.4_prediction_random_forest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="step6.5prediction_neural_network" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="projekt_geschlecht2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.5prediction_neural_network.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="step6.6_prediction_neural_network" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="projekt_geschlecht2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Projekt\projekt_geschlecht2\step6.5prediction_neural_network.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -241,11 +257,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.step6.4_prediction_random_forest" />
+        <item itemvalue="Python.step6.5prediction_neural_network" />
+        <item itemvalue="Python.step6.6_prediction_neural_network" />
         <item itemvalue="Python.step6.5_prediction_random_forest" />
         <item itemvalue="Python.step6.4_prediction_decision_tree" />
-        <item itemvalue="Python.step6.3_prediction_knn" />
-        <item itemvalue="Python.step6.1_prediction_logreg" />
-        <item itemvalue="Python.step5_balance_gender" />
       </list>
     </recent_temporary>
   </component>
@@ -386,36 +402,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/step3.1_genderspecific_article.py">
+    <entry file="file://$PROJECT_DIR$/step6.2_predicition_svm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-888">
-          <caret line="2" column="92" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step3.2.1_gender_article_unique.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-633">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step3.0_sorting_dataframe_by_session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step4_normalize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -435,50 +427,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="256" selection-start-line="4" selection-start-column="256" selection-end-line="4" selection-end-column="256" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step5_balance_gender.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step3.2.2_search_and_clothing_column.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step6.2_predicition_svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step6.6_prediction_neural_network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/step1_geschlecht.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="459">
           <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
           <folding>
             <element signature="e#21#40#0" expanded="true" />
@@ -488,50 +439,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/step2_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step3.0_sorting_dataframe_by_session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step3.1_genderspecific_article.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step3.2.1_gender_article_unique.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step3.2.2_search_and_clothing_column.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step4_normalize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step5_balance_gender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/step6.1_prediction_logreg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="110" />
+        <state relative-caret-position="289">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step6.2_prediction_knn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#20#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step6.3_prediction_knn.py">
+    <entry file="file://$PROJECT_DIR$/step6.3_prediction_decision_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="e#20#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step6.4_prediction_random_forest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
-          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+          <caret line="50" selection-start-line="50" selection-end-line="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step6.4_prediction_decision_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/step6.5_prediction_random_forest.py">
+    <entry file="file://$PROJECT_DIR$/step6.5prediction_neural_network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1#20#0" expanded="true" />
           </folding>
         </state>
       </provider>

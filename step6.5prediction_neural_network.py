@@ -1,5 +1,6 @@
-import numpy as np
+# IMPORT BOUNDARIES
 import pandas as pd
+import sys
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report, confusion_matrix
@@ -7,7 +8,8 @@ from sklearn import metrics
 from sklearn.preprocessing import StandardScaler
 
 # LOAD DATA
-df = pd.read_csv("datasets/preprocessing5_balance_gender/balanced_gender.csv", error_bad_lines=False, sep=';', low_memory=False)
+df = pd.read_csv("datasets/preprocessing5_balance_gender/balanced_gender.csv", error_bad_lines=False, sep=';',
+                 low_memory=False)
 
 # SPLIT DATA IN TRAIN AND TEST
 y = df['ANREDE']
@@ -28,3 +30,7 @@ predictions = mlp.predict(X_test)
 print(confusion_matrix(y_test, predictions))
 print(classification_report(y_test, predictions))
 print("Accuracy:", metrics.accuracy_score(y_test, predictions))
+
+# ECHO OUTPUT IN FILE
+sys.stdout = open("c:\\Projekt\projekt_geschlecht2\Echo_files\\neural_network.txt", "w")
+print("Neural Network got an accuracy score of ", round(metrics.accuracy_score(y_test, predictions), 3) * 100, "%.")

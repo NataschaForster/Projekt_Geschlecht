@@ -1,11 +1,10 @@
-import numpy as np
+# IMPORT BOUNDARIES
 import pandas as pd
 import sys
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
-from sklearn import tree
 
 # LOAD DATA
 df = pd.read_csv("datasets/preprocessing5_balance_gender/balanced_gender.csv", error_bad_lines=False, sep=';', low_memory=False)
@@ -20,7 +19,7 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-# DECISION TREE MODEL
+# DECISION TREE MODEL AND FITTING TO TRAIN SET
 clf_gini = DecisionTreeClassifier(random_state=1, max_depth=3, min_samples_leaf=5)
 clf_gini.fit(X_train, y_train)
 

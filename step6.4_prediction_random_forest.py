@@ -1,3 +1,4 @@
+# IMPORT BOUNDARIES
 import pandas as pd
 import sys
 from sklearn.model_selection import train_test_split
@@ -19,11 +20,12 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
+# NEXT PART IS ONLY TO BE EXECUTED ONCE TO FIND BEST PARAMETERS
 '''''''''
 # SEARCHING FOR BEST PARAMETERS
-grid_params = {'n_estimators': [500],
-               'max_features': ['sqrt'],
-               'max_depth': [225]}
+grid_params = {'n_estimators': [400, 500, 600],
+               'max_features': ['sqrt', 'log2'],
+               'max_depth': [200, 225, 250]}
 
 gs = GridSearchCV(RandomForestClassifier(),
                   grid_params,
@@ -36,16 +38,16 @@ gs_results = gs.fit(X_train, y_train)
 print(gs_results.best_score_)
 print(gs_results.best_estimator_)
 print(gs_results.best_params_)
-
 '''''''''
-# FIT MODEL
+
+# CREATE AND FIT MODEL
 regressor = RandomForestClassifier(max_depth=225, max_features='sqrt', n_estimators=500)
 regressor.fit(X_train, y_train)
-y_pred = regressor.predict(X_test)
+predictions = regressor.predict(X_test)
 
 # SHOW ACCURACY
-print("Random Forest: ", accuracy_score(y_test, y_pred.round(), normalize=True))
+print("Random Forest: ", accuracy_score(y_test, predictions.round(), normalize=True))
 
 # ECHO OUTPUT IN FILE
-sys.stdout = open("c:\\Projekt\projekt_geschlecht2\Echo_files\random_forest.txt", "w")
-print("Random Forest got an accuracy score of ", round(accuracy_score(y_test, y_pred), 3)*100, "%.")
+sys.stdout = open("c:\\Projekt\projekt_geschlecht2\Echo_files\\random_forest.txt", "w")
+print("Random Forest got an accuracy score of ", round(accuracy_score(y_test, predictions), 3) * 100, "%.")
