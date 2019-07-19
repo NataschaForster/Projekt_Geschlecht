@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="478ddccf-6626-42af-8319-fbb9de406bcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step2_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/step2_preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step3.0_sorting_dataframe_by_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.0_sorting_dataframe_by_session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step3.1_genderspecific_article.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.1_genderspecific_article.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step3.2.1_gender_article_unique.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.2.1_gender_article_unique.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step3.2.2_search_and_clothing_column.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.2.2_search_and_clothing_column.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step3.3_only_numeric_columns.py" beforeDir="false" afterPath="$PROJECT_DIR$/step3.3_only_numeric_columns.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step4_normalize.py" beforeDir="false" afterPath="$PROJECT_DIR$/step4_normalize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step5_balance_gender.py" beforeDir="false" afterPath="$PROJECT_DIR$/step5_balance_gender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_me.md" beforeDir="false" afterPath="$PROJECT_DIR$/read_me.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/step6.1_prediction_logreg.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.1_prediction_logreg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step6.3_prediction_knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.2_prediction_knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step6.4_prediction_decision_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.3_prediction_decision_tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step6.5_prediction_random_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.4_prediction_random_forest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step6.6_prediction_neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.5prediction_neural_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step6.3_prediction_decision_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.3_prediction_decision_tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step6.5prediction_neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/step6.5_prediction_neural_network.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +19,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/step6.5prediction_neural_network.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/step6.4_prediction_random_forest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state>
+              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
               <folding>
-                <element signature="e#1#20#0" expanded="true" />
+                <element signature="e#20#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/step6.5_prediction_neural_network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <element signature="e#20#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,7 +74,6 @@
         <option value="$PROJECT_DIR$/read_me.txt" />
         <option value="$PROJECT_DIR$/step3.2_gender_article_unique.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/read_me.md" />
         <option value="$PROJECT_DIR$/step6_prediction_model.py" />
         <option value="$PROJECT_DIR$/step7_predicition_svm.py" />
         <option value="$PROJECT_DIR$/step6.2_predicition_svm.py" />
@@ -87,12 +89,15 @@
         <option value="$PROJECT_DIR$/step3.3_only_numeric_columns.py" />
         <option value="$PROJECT_DIR$/step4_normalize.py" />
         <option value="$PROJECT_DIR$/step5_balance_gender.py" />
-        <option value="$PROJECT_DIR$/step6.1_prediction_logreg.py" />
         <option value="$PROJECT_DIR$/step6.2_prediction_knn.py" />
-        <option value="$PROJECT_DIR$/step6.3_prediction_decision_tree.py" />
         <option value="$PROJECT_DIR$/step6.5_prediction_random_forest.py" />
         <option value="$PROJECT_DIR$/step6.6_prediction_neural_network.py" />
         <option value="$PROJECT_DIR$/step6.5prediction_neural_network.py" />
+        <option value="$PROJECT_DIR$/read_me.md" />
+        <option value="$PROJECT_DIR$/step6.3_prediction_decision_tree.py" />
+        <option value="$PROJECT_DIR$/step6.4_prediction_random_forest.py" />
+        <option value="$PROJECT_DIR$/step6.1_prediction_logreg.py" />
+        <option value="$PROJECT_DIR$/step6.5_prediction_neural_network.py" />
       </list>
     </option>
   </component>
@@ -109,7 +114,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,6 +134,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,8 +154,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.step6.4_prediction_random_forest">
-    <configuration name="step6.4_prediction_decision_tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.step6.5_prediction_neural_network">
+    <configuration name="step6.1_prediction_logreg" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="projekt_geschlecht2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,7 +167,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Projekt\projekt_geschlecht2\step6.3_prediction_decision_tree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.1_prediction_logreg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="step6.3_prediction_decision_tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="projekt_geschlecht2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.3_prediction_decision_tree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,7 +218,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="step6.5_prediction_random_forest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="step6.5_prediction_neural_network" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="projekt_geschlecht2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -204,7 +230,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Projekt\projekt_geschlecht2\step6.4_prediction_random_forest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.5_prediction_neural_network.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -225,28 +251,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step6.5prediction_neural_network.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="step6.6_prediction_neural_network" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="projekt_geschlecht2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Projekt\projekt_geschlecht2\step6.5prediction_neural_network.py" />
+      <option name="SCRIPT_NAME" value="C:\Projekt\projekt_geschlecht2\step6.5_prediction_neural_network.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -257,11 +262,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.step6.5_prediction_neural_network" />
+        <item itemvalue="Python.step6.1_prediction_logreg" />
+        <item itemvalue="Python.step6.3_prediction_decision_tree" />
         <item itemvalue="Python.step6.4_prediction_random_forest" />
         <item itemvalue="Python.step6.5prediction_neural_network" />
-        <item itemvalue="Python.step6.6_prediction_neural_network" />
-        <item itemvalue="Python.step6.5_prediction_random_forest" />
-        <item itemvalue="Python.step6.4_prediction_decision_tree" />
       </list>
     </recent_temporary>
   </component>
@@ -402,31 +407,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/step6.2_predicition_svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_me.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/step6.2_predicition_svm.py" />
     <entry file="file://$PROJECT_DIR$/step1_geschlecht.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -478,13 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/step4_normalize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -502,16 +476,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step6.1_prediction_logreg.py">
+    <entry file="file://$PROJECT_DIR$/Echo_files/neural_network.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step3.3_only_numeric_columns.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_me.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="500">
+            <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/step6.2_prediction_knn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
+        <state relative-caret-position="873">
           <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#20#39#0" expanded="true" />
@@ -521,8 +513,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/step6.3_prediction_decision_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        <state relative-caret-position="-167">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="e#20#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step6.1_prediction_logreg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
           <folding>
             <element signature="e#20#39#0" expanded="true" />
           </folding>
@@ -531,17 +533,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/step6.4_prediction_random_forest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="50" selection-start-line="50" selection-end-line="53" />
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#20#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step6.5prediction_neural_network.py">
+    <entry file="file://$PROJECT_DIR$/step6.5_prediction_neural_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="326">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
-            <element signature="e#1#20#0" expanded="true" />
+            <element signature="e#20#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

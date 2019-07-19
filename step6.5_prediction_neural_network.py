@@ -1,9 +1,11 @@
 # IMPORT BOUNDARIES
 import pandas as pd
+import numpy as np
 import sys
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.model_selection import GridSearchCV
 from sklearn import metrics
 from sklearn.preprocessing import StandardScaler
 
@@ -15,6 +17,27 @@ df = pd.read_csv("datasets/preprocessing5_balance_gender/balanced_gender.csv", e
 y = df['ANREDE']
 X = df.drop(['ANREDE'], axis=1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+
+# NEXT PART IS ONLY TO BE EXECUTED ONCE TO FIND BEST PARAMETERS
+'''''''''
+# SEARCHING FOR BEST PARAMETERS
+grid_params = {'solver': ['lbfgs'],
+               'max_iter': range(1000, 2000, 100),
+               'hidden_layer_sizes': np.arange(10, 15),
+               'random_state': range(0, 9)}
+
+gs = GridSearchCV(MLPClassifier(),
+                  grid_params,
+                  verbose=1,
+                  cv=3,
+                  n_jobs=-1)
+
+gs_results = gs.fit(X_train, y_train)
+
+print(gs_results.best_score_)
+print(gs_results.best_estimator_)
+print(gs_results.best_params_)
+'''''''''
 
 # SCALING DATA
 sc = StandardScaler()

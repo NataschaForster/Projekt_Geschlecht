@@ -54,7 +54,19 @@ Normalizing the data and deleting outliers.
 Creating a dataframe with equal men and women rows.
 *Data preprocessing done.*
 
-**Step 6:**     
-Algorithm and prediction.
+**Step 6.1:**     
+Logistic Regression algorithm and prediction.
+
+**Step 6.2:**     
+k-Nearest Neighbor algorithm and prediction.
+
+**Step 6.3:**     
+Decision Tree algorithm and prediction.
+
+**Step 6.4:**     
+Random Forest algorithm and prediction.
+
+**Step 6.5:**     
+ Neural Network algorithm and prediction.
           
 

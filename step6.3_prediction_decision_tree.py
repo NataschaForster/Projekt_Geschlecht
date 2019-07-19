@@ -3,6 +3,7 @@ import pandas as pd
 import sys
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 
@@ -19,8 +20,26 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
+'''''''''
+# SEARCHING FOR BEST PARAMETERS
+grid_params = {'min_samples_leaf': range(1, 2),
+               'max_depth': range(50, 150, 2)}
+
+gs = GridSearchCV(DecisionTreeClassifier(),
+                  grid_params,
+                  verbose=1,
+                  cv=3,
+                  n_jobs=-1)
+
+gs_results = gs.fit(X_train, y_train)
+
+print(gs_results.best_score_)
+print(gs_results.best_estimator_)
+print(gs_results.best_params_)
+
+'''''''''
 # DECISION TREE MODEL AND FITTING TO TRAIN SET
-clf_gini = DecisionTreeClassifier(random_state=1, max_depth=3, min_samples_leaf=5)
+clf_gini = DecisionTreeClassifier(random_state=1, max_depth=88, min_samples_leaf=1)
 clf_gini.fit(X_train, y_train)
 
 # PREDICTION
